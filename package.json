@@ -1,0 +1,11 @@
+{
+  "name": "korali-el-paso-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "qa:structural": "node scripts/qa-structural.mjs",
+    "qa:browser": "node scripts/qa-browser.mjs",
+    "qa": "npm run qa:structural && npm run qa:browser"
+  }
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f3eee6">
+  <meta name="description" content="Demo no oficial de una experiencia editorial para El Paso Tienda Multimarca, Valencia.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>El Paso — Tienda Multimarca · Demo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2327201c'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='serif' font-size='37' fill='%23f4eee5'%3EEP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/demos/el-paso/assets/styles.css">
+  <script src="/demos/el-paso/assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+  <div class="demo-bar">Página web demo no oficial; compra simulada</div>
+
+  <header class="site-header">
+    <a class="wordmark" href="/demos/el-paso/" aria-label="El Paso, inicio">
+      <span>El</span><strong>Paso</strong><small>TIENDA MULTIMARCA</small>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#catalogo">Tienda</a><a href="#experiencia">Experiencia</a><a href="#visitanos">Visítanos</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Buscar" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Ver favoritos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.7 0L12 5.7l-1.1-1.1a5.4 5.4 0 1 0-7.7 7.7L12 21l8.8-8.7a5.4 5.4 0 0 0 0-7.7Z"/></svg><span class="count" id="wishlistCount">0</span>
+      </button>
+      <button class="bag-btn" id="cartToggle" aria-label="Abrir bolsa"><span>Bolsa</span><b id="cartCount">0</b></button>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <label for="searchInput">Buscar en la selección</label>
+      <div><input id="searchInput" type="search" placeholder="Moda, skincare, café…" autocomplete="off"><button id="searchClose" aria-label="Cerrar búsqueda">×</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <img src="/demos/el-paso/assets/images/elpaso-04.jpg" alt="Chaleco negro de líneas depuradas y botones dorados" width="1080" height="1440">
+      <div class="hero-copy">
+        <p class="eyebrow">Valencia · Curaduría multimarca</p>
+        <h1 id="heroTitle">Todo lo que te gusta,<br><em>en un solo lugar.</em></h1>
+        <p>Moda, accesorios, belleza y sabores elegidos entre más de 25 marcas nacionales e internacionales.</p>
+        <a class="button dark" href="#catalogo">Explorar selección</a>
+      </div>
+      <p class="hero-note">Selección visual referencial · disponibilidad por confirmar</p>
+    </section>
+
+    <section class="store-toolbar" id="catalogo" aria-labelledby="catalogTitle">
+      <div>
+        <p class="eyebrow">La selección</p>
+        <h2 id="catalogTitle">Descubre tu próximo favorito</h2>
+      </div>
+      <div class="categories" role="group" aria-label="Filtrar por categoría">
+        <button class="active" data-category="all">Todo</button>
+        <button data-category="moda">Moda</button>
+        <button data-category="accesorios">Accesorios</button>
+        <button data-category="belleza">Belleza</button>
+        <button data-category="gourmet">Gourmet & café</button>
+      </div>
+    </section>
+
+    <section class="product-grid" id="productGrid" aria-live="polite"></section>
+    <p class="empty-state" id="emptyState" hidden>No encontramos piezas con esa búsqueda. Prueba otra palabra o categoría.</p>
+
+    <section class="editorial-split" id="experiencia">
+      <div class="editorial-image"><img src="/demos/el-paso/assets/images/elpaso-08.jpg" alt="Estilismo en tonos crema y chocolate con joyería y bolso" width="1080" height="1350" loading="lazy"></div>
+      <div class="editorial-copy">
+        <p class="eyebrow">Más que una tienda</p>
+        <h2>Marcas que se encuentran.<br><em>Ideas que se conectan.</em></h2>
+        <p>El Paso reúne propuestas nacionales e internacionales en una experiencia para mirar, probar, descubrir y compartir. La oferta visible aquí es una muestra editorial basada en imágenes públicas; productos y disponibilidad deben confirmarse directamente con la tienda.</p>
+        <div class="editorial-list"><span>25+ marcas</span><span>Moda & accesorios</span><span>Skincare</span><span>Café & gourmet</span><span>Eventos</span></div>
+      </div>
+    </section>
+
+    <section class="events-section">
+      <div>
+        <p class="eyebrow">Agenda El Paso</p>
+        <h2>Encuentros, lanzamientos<br>y experiencias.</h2>
+        <p>Un espacio donde las marcas comparten su universo. Consulta los próximos eventos directamente con la tienda.</p>
+        <button class="button outline" id="eventInquiry">Consultar próximos eventos</button>
+      </div>
+      <img src="/demos/el-paso/assets/images/elpaso-02.jpg" alt="Presentación dentro del espacio multimarca" width="540" height="960" loading="lazy">
+    </section>
+
+    <section class="visit-section" id="visitanos">
+      <div class="visit-card photo-card"><img src="/demos/el-paso/assets/images/elpaso-01.jpg" alt="Horario y ubicación oficial de El Paso Tienda Multimarca" width="1080" height="1350" loading="lazy"></div>
+      <div class="visit-card details-card">
+        <p class="eyebrow">Ven a descubrir</p><h2>El Paso,<br><em>en persona.</em></h2>
+        <dl><div><dt>Dirección</dt><dd>Casa Spazio de Talenti, local 1<br>Trigal Centro, frente al Colegio Lisandro Ramírez<br>Valencia</dd></div><div><dt>Horario</dt><dd>Lunes a viernes · 10:00–17:00<br>Sábado · 10:00–16:00</dd></div></dl>
+        <a class="button dark" href="https://wa.link/3lvpqa" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="footer-mark"><span>El</span><strong>Paso</strong><small>TIENDA MULTIMARCA</small></div><div><p>Valencia · Venezuela</p><p>L–V 10–17 · Sáb 10–16</p></div><p class="footer-demo">Página web demo no oficial.<br>Catálogo y compra simulados; no se envían datos.</p></footer>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="drawer-head"><div><p class="eyebrow">Tu selección</p><h2 id="cartTitle">Bolsa</h2></div><button class="close-btn" data-close aria-label="Cerrar bolsa">×</button></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot"><div class="total"><span>Total</span><strong>Por confirmar</strong></div><p>La tienda confirmaría disponibilidad, precios y modalidad antes de cualquier compra real.</p><button class="button dark full" id="checkoutButton">Continuar consulta</button></div>
+  </aside>
+
+  <aside class="drawer" id="wishlistDrawer" aria-hidden="true" aria-labelledby="wishlistTitle">
+    <div class="drawer-head"><div><p class="eyebrow">Guardados</p><h2 id="wishlistTitle">Favoritos</h2></div><button class="close-btn" data-close aria-label="Cerrar favoritos">×</button></div>
+    <div class="drawer-body" id="wishlistItems"></div>
+  </aside>
+
+  <dialog id="productDialog" class="product-dialog"><button class="close-btn dialog-close" data-close aria-label="Cerrar detalle">×</button><div id="productDetail"></div></dialog>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <button class="close-btn dialog-close" data-close aria-label="Cerrar consulta">×</button>
+    <form id="checkoutForm" novalidate>
+      <div class="checkout-step" id="checkoutFormStep">
+        <p class="eyebrow">Consulta simulada</p><h2>¿Cómo prefieres recibir tu selección?</h2>
+        <p class="form-intro">No se enviará información ni se procesará pago alguno.</p>
+        <fieldset><legend>Modalidad</legend><label class="choice"><input type="radio" name="method" value="pickup" checked><span><strong>Retiro en tienda</strong><small>Casa Spazio de Talenti, local 1</small></span></label><label class="choice"><input type="radio" name="method" value="delivery"><span><strong>Consultar entrega</strong><small>Cobertura y costo por confirmar</small></span></label></fieldset>
+        <div class="field" id="addressField" hidden><label for="address">Dirección de entrega <span>requerida</span></label><textarea id="address" name="address" rows="3" placeholder="Indica la dirección para consultar cobertura"></textarea><p class="field-error" id="addressError"></p></div>
+        <label class="terms"><input type="checkbox" id="terms" required><span>Entiendo que esta es una demostración y que no se realizará ni enviará una compra real.</span></label><p class="field-error" id="termsError"></p>
+        <div class="summary-line"><span id="summaryCount">0 artículos</span><strong>Total: Por confirmar</strong></div>
+        <button class="button dark full" type="submit">Confirmar simulación</button>
+      </div>
+      <div class="confirmation" id="confirmation" hidden>
+        <span class="confirmation-mark">✓</span><p class="eyebrow">Demostración completada</p><h2>Tu selección quedó registrada localmente.</h2><p>No se enviaron datos ni se creó un pedido real. En una web oficial, la tienda confirmaría disponibilidad, precio y entrega antes de continuar.</p><div id="confirmationSummary"></div><button class="button dark" type="button" id="finishOrder">Volver a la tienda</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

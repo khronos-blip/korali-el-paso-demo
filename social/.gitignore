@@ -1,0 +1,5 @@
+# Keep generated social deliverables versionable despite the workspace-wide PNG rule.
+!avatar.png
+!profile-grid-mockup.png
+!posts/*.png
+!comparison/*.png

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "baseURL": "http://127.0.0.1:50195/demos/el-paso/",
+  "desktop": {
+    "catalogProducts": 6,
+    "search": "PASS",
+    "categoryFilter": "PASS",
+    "detail": "PASS",
+    "wishlist": "PASS",
+    "cartDistinctItems": 2,
+    "quantityTotal": 3,
+    "persistence": "PASS",
+    "deliveryAddressRequired": "PASS",
+    "confirmation": "PASS",
+    "overflow": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    }
+  },
+  "mobile": {
+    "viewport": "390x844@2x",
+    "catalogProducts": 6,
+    "detail": "PASS",
+    "overflow": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": false
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "offOriginRequests": []
+}
