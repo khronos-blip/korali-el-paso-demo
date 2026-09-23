@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "baseURL": "http://127.0.0.1:50195/demos/el-paso/",
+  "baseURL": "http://127.0.0.1:55017/demos/el-paso/",
   "desktop": {
     "catalogProducts": 6,
     "search": "PASS",
